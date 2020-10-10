@@ -5,6 +5,7 @@ import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 
 import sveltePreprocess from "svelte-preprocess";
+import { imageOptimizer } from "svelte-responsive-images";
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -62,7 +63,7 @@ export default {
         css.write("bundle.css");
       },
     }),
-
+    imageOptimizer(),
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
     // some cases you'll need additional configuration -
