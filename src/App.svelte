@@ -2,33 +2,18 @@
   export let name;
 </script>
 
-<!--ADD lang="scss", variables "$primary" from rollup.config scss({prependData})-->
-<style lang="scss">
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-    h1 {
-      color: $primary;
-      text-transform: uppercase;
-      font-size: 4em;
-      font-weight: 100;
-    }
-  }
+<!--
+  add lang="scss" 
+  with src you can add an external scss file but than you can't write inside the style tag 
+  rollup.config prepends bootstrap-custom.scss 
+-->
+<style lang="scss" src="./styles/test-import.scss"></style>
 
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
-</style>
-
-<main>
-  <h1>Helloooo {name}!</h1>
-  <p>
-    Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-    to learn how to build Svelte apps.
-  </p>
+<main class="container">
+  <div class="row">
+    <h1 class="bg-primary col overflow-hidden">Hello {name}!</h1>
+    <div class="col d-flex justify-content-center align-items-center">
+      <h2>Lorem Ipsum</h2>
+    </div>
+  </div>
 </main>
