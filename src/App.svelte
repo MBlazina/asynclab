@@ -1,5 +1,8 @@
 <script>
-  export let name;
+  //ROUTIFY IMPORT
+  import { Router } from "@sveltech/routify";
+  import { routes } from "@sveltech/routify/tmp/routes";
+
 </script>
 
 <!--
@@ -9,11 +12,10 @@
 -->
 <style lang="scss" src="./styles/test-import.scss"></style>
 
-<main class="container">
-  <div class="row">
-    <h1 class="bg-primary col overflow-hidden">Hello {name}!</h1>
-    <div class="col d-flex justify-content-center align-items-center">
-      <h2>Lorem Ipsum</h2>
-    </div>
-  </div>
-</main>
+
+  <Router {routes} />
+
+      
+
+
+
