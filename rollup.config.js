@@ -48,7 +48,7 @@ export default {
           // We can use a path relative to the root because
           // svelte-preprocess automatically adds it to `includePaths`
           // if none is defined.
-          prependData: `@import 'src/libs/bootstrap/bootstrap-custom.scss';`,
+          prependData: `@import 'src/styles/libs-import.scss';`
         },
         postcss: {
           plugins: [require("autoprefixer")()],
