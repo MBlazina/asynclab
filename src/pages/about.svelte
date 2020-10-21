@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<style lang="scss" src="../styles/test-import.scss">
+<style lang="scss">
 </style>
 
 <div class="container" data-aos="fade-up">

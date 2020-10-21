@@ -1,15 +1,25 @@
 //COLORS
-$primary:      coral;
-$secondary:    cadetBlue;
+$primary:      #1d1d1d;
+$secondary: #2396b4;
+
+$white:    #fff;
+$gray-100: #f5f5f5;
+$gray-200: #d6d6d6;
+$gray-300: #bcbcbc;
+$gray-400: #8a8a8a;
+$gray-700: #525252;
+$gray-800:#232323;
+$gray-900: #1d1d1d;
+$black:    #000;
 
 // Links
 //
 // Style anchor elements.
 
 $link-color:                              $primary;
-$link-decoration:                         none !default;
+$link-decoration:                         none;
 $link-hover-color:                        darken($link-color, 15%) !default;
-$link-hover-decoration:                   underline !default;
+$link-hover-decoration:                   none;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
 
@@ -82,107 +92,6 @@ $spacers: map-merge(
   $spacers
 );
 
-   /* 0: ($spacer * 0),
-    1: ($spacer * 1),
-    2: ($spacer * 2),
-    3: ($spacer * 3),
-    4: ($spacer * 4),
-    5: ($spacer * 5),
-    6: ($spacer * 6),
-    7: ($spacer * 7),
-    8: ($spacer * 8),
-    9: ($spacer * 9),
-    10: ($spacer * 10),
-    11: ($spacer * 11),
-    12: ($spacer * 12),
-    13: ($spacer * 13),
-    14: ($spacer * 14),
-    15: ($spacer * 15),
-    16: ($spacer * 16),
-    17: ($spacer * 17),
-    18: ($spacer * 18),
-    19: ($spacer * 19),
-    20: ($spacer * 20),
-    21: ($spacer * 21),
-    22: ($spacer * 22),
-    23: ($spacer * 23),
-    24: ($spacer * 24),
-    25: ($spacer * 25),
-    26: ($spacer * 26),
-    27: ($spacer * 27),
-    28: ($spacer * 28),
-    29: ($spacer * 29),
-    30: ($spacer * 30),
-    31: ($spacer * 31),
-    32: ($spacer * 32),
-    33: ($spacer * 33),
-    34: ($spacer * 34),
-    35: ($spacer * 35),
-    36: ($spacer * 36),
-    37: ($spacer * 37),
-    38: ($spacer * 38),
-    39: ($spacer * 39),
-    40: ($spacer * 40),
-    41: ($spacer * 41),
-    42: ($spacer * 42),
-    43: ($spacer * 43),
-    44: ($spacer * 44),
-    45: ($spacer * 45),
-    46: ($spacer * 46),
-    47: ($spacer * 47),
-    48: ($spacer * 48),
-    49: ($spacer * 49),
-    50: ($spacer * 50),
-    51: ($spacer * 51),
-    52: ($spacer * 52),
-    53: ($spacer * 53),
-    54: ($spacer * 54),
-    55: ($spacer * 55),
-    56: ($spacer * 56),
-    57: ($spacer * 57),
-    58: ($spacer * 58),
-    59: ($spacer * 59),
-    60: ($spacer * 60),
-    61: ($spacer * 61),
-    62: ($spacer * 62),
-    63: ($spacer * 63),
-    64: ($spacer * 64),
-    65: ($spacer * 65),
-    66: ($spacer * 66),
-    67: ($spacer * 67),
-    68: ($spacer * 68),
-    69: ($spacer * 69),
-    70: ($spacer * 70),
-    71: ($spacer * 71),
-    72: ($spacer * 72),
-    73: ($spacer * 73),
-    74: ($spacer * 74),
-    75: ($spacer * 75),
-    76: ($spacer * 76),
-    77: ($spacer * 77),
-    78: ($spacer * 78),
-    79: ($spacer * 79),
-    80: ($spacer * 80),
-    81: ($spacer * 81),
-    82: ($spacer * 82),
-    83: ($spacer * 83),
-    84: ($spacer * 84),
-    85: ($spacer * 85),
-    86: ($spacer * 86),
-    87: ($spacer * 87),
-    88: ($spacer * 88),
-    89: ($spacer * 89),
-    90: ($spacer * 90),
-    91: ($spacer * 91),
-    92: ($spacer * 92),
-    93: ($spacer * 93),
-    94: ($spacer * 94),
-    95: ($spacer * 95),
-    96: ($spacer * 96),
-    97: ($spacer * 97),
-    98: ($spacer * 98),
-    99: ($spacer * 99),
-    100: ($spacer * 100)
-  );*/
+   
 
 @import './scss/bootstrap.scss';
