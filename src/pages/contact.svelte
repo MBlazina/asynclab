@@ -11,6 +11,12 @@ import ContactForm from "../components/ContactForm.svelte";
   h1 {
     margin-bottom: 41px;
   }
+  .introText{
+    margin-bottom: 110px;
+  }
+  .formWrapper{
+    margin-bottom: 120px;
+  }
 </style>
 
 <svelte:head>
@@ -21,7 +27,7 @@ import ContactForm from "../components/ContactForm.svelte";
   <div class="row">
     <div class="col-md-6 offset-md-1">
       <h1>Let’s talk</h1>
-      <p>
+      <p class="introText">
         Deep light land beginning form fish there brought fifth forth earth us
         make cattle seasons every spirit one can't behold, creepeth fish thing
         male his him.
@@ -31,7 +37,7 @@ import ContactForm from "../components/ContactForm.svelte";
       <BackgroundTitle title={pageTitle} />
     </div>
   </div>
-  <div class="row">
+  <div class="row formWrapper">
     <ContactForm />
   </div>
 </div>
