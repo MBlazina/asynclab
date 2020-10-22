@@ -53,6 +53,7 @@ footer :global(.LinkComponent:hover){
   color: white;
 }
 
+
 </style>
 
 <footer class="bg-primary">

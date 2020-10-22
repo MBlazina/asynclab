@@ -2,10 +2,9 @@
   import { url, isActive } from "@sveltech/routify";
 
   let menuOpen = false;
-   function handleMenu() {
-  menuOpen = !menuOpen;
-}
-
+  function handleMenu() {
+    menuOpen = !menuOpen;
+  }
 </script>
 
 <style lang="scss">
@@ -30,12 +29,51 @@
       color: white;
     }
     .mainNav {
+      li {
+        display: flex;
+        align-items: center;
+        &:hover {
+          .menuArrow {
+            opacity: 1;
+          }
+        }
+      }
       list-style: none;
       a {
         font-size: 46px;
         font-weight: bold;
         line-height: 1.96;
         &:hover {
+          color: white !important;
+        }
+      }
+      &:hover {
+        a {
+          color: $gray-400;
+        }
+      }
+      .menuArrow {
+        width: 21px;
+        height: 18px;
+        margin-left: 27px;
+        background: url("/assets/menu-arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+      }
+    }
+    .utilityNav {
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.08;
+      letter-spacing: normal;
+      list-style: none;
+      a{
+        color: #b3b3b3;
+        &:hover{
+          color: white;
         }
       }
     }
@@ -63,6 +101,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    pointer-events: none;
   }
   #menuIcon {
     width: 34px;
@@ -104,30 +143,35 @@
     class:open={menuOpen}
     class="col col-md-8 offset-md-4 h-100">
     <div class="row">
-      <ul class="mainNav offset-md-2 col-md-4">
+      <ul class="mainNav offset-md-2 col-md-4" on:click={handleMenu}>
         <li>
           <a href={$url('/index')} class:active={$isActive('/index')}>Home</a>
+          <div class="menuArrow" />
         </li>
         <li>
           <a
             href={$url('/projects')}
             class:active={$isActive('/projects')}>Projects</a>
+          <div class="menuArrow" />
         </li>
         <li>
           <a href={$url('/about')} class:active={$isActive('/about')}>About</a>
+          <div class="menuArrow" />
         </li>
         <li>
           <a
             href={$url('/services')}
             class:active={$isActive('/services')}>Services</a>
+          <div class="menuArrow" />
         </li>
         <li>
           <a
             href={$url('/contact')}
             class:active={$isActive('/contact')}>Contact</a>
+            <div class="menuArrow" />
         </li>
       </ul>
-      <ul class="offset-md-2 col-md-4">
+      <ul class="utilityNav offset-md-1 col-md-4" on:click={handleMenu}>
         <li>
           <a
             href={$url('/careers')}
@@ -143,7 +187,6 @@
     </div>
   </div>
 </div>
-
 
 <header class="">
   <div class="container">
