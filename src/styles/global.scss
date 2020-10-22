@@ -32,7 +32,10 @@ h1{
   font-style: normal;
   line-height: 1.2;
   letter-spacing: normal;
-  color: $primary
+  color: $primary;
+  @media only screen and (max-width: $break-mobile) {
+      font-size: 35px;
+  }
 }
 h2{
     font-size: 46px;
@@ -42,6 +45,9 @@ h2{
   line-height: 1.26;
   letter-spacing: normal;
   color: $primary;
+  @media only screen and (max-width: $break-mobile) {
+      font-size: 28px;
+  }
 }
 p{
     font-size: 20px;

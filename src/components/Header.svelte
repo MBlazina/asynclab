@@ -18,7 +18,6 @@
     pointer-events: none;
     opacity: 0;
     transition: right 0.5s, opacity 0.5s;
-    padding-top: 110px;
 
     &.open {
       opacity: 1;
@@ -70,9 +69,9 @@
       line-height: 2.08;
       letter-spacing: normal;
       list-style: none;
-      a{
+      a {
         color: #b3b3b3;
-        &:hover{
+        &:hover {
           color: white;
         }
       }
@@ -134,6 +133,50 @@
       margin-top: 8px;
     }
   }
+
+  $menuWidth: 18px;
+  $iconWidth: 2px;
+  .closeIcon {
+    width: $menuWidth;
+    height: $menuWidth;
+    margin-right: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+    margin-bottom: 68px;
+    cursor: pointer;
+    &:hover {
+      &::before,
+      &::after {
+        background-color: white;
+      }
+      &::before{
+        transform: rotate(135deg);
+      }
+      &::after{
+        transform: rotate(45deg);
+      }
+    }
+    &::before,
+    &::after {
+      content: "";
+      width: calc(#{$menuWidth} + #{$menuWidth} / 2);
+      position: absolute;
+      height: $iconWidth;
+      border-radius: $iconWidth;
+      background-color: #b3b3b3;
+      display: block;
+      transition: transform 0.2s;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 </style>
 
 <div class="menuWrapper">
@@ -142,6 +185,9 @@
     id="mainMenu"
     class:open={menuOpen}
     class="col col-md-8 offset-md-4 h-100">
+    <div class="row d-flex justify-content-end">
+      <div class="closeIcon" on:click={handleMenu} />
+    </div>
     <div class="row">
       <ul class="mainNav offset-md-2 col-md-4" on:click={handleMenu}>
         <li>
@@ -168,7 +214,7 @@
           <a
             href={$url('/contact')}
             class:active={$isActive('/contact')}>Contact</a>
-            <div class="menuArrow" />
+          <div class="menuArrow" />
         </li>
       </ul>
       <ul class="utilityNav offset-md-1 col-md-4" on:click={handleMenu}>
@@ -188,15 +234,18 @@
   </div>
 </div>
 
-<header class="">
+<header>
   <div class="container">
     <div class="row d-flex justify-content-between align-items-center">
-      <a href={$url('/index')} class="p-15" class:active={$isActive('/index')}>
+      <a
+        href={$url('/index')}
+        class="pl-15 pl-md-0"
+        class:active={$isActive('/index')}>
         <img alt="logo" src="assets/logo.svg" width="105" />
       </a>
       <div
         id="menuIcon"
-        class="d-flex flex-column align-items-end"
+        class="mr-15 mr-md-0 d-flex flex-column align-items-end"
         on:click={handleMenu} />
       <!-- <a href={$url('/contact')} class="p-15" class:active={$isActive('/contact')}>Contact</a> -->
     </div>

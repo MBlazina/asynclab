@@ -1,10 +1,13 @@
 <script>
+  import Button from "./Button.svelte";
+
   export let position = "right";
   export let title = "title";
-  export let text = "insert some profound text here"
+  export let text = "insert some profound text here";
   export let imageMain = "assets/images/services/1.jpg";
   export let imageSecondary = "assets/images/services/2.jpg";
-  import Button from "./Button.svelte";
+
+  export let listItems = ["one", "two", "three"];
 </script>
 
 <style lang="scss">
@@ -17,6 +20,9 @@
 
   .imgMain {
     margin-top: 116px;
+    @media only screen and (max-width: $break-mobile) {
+      margin-top: 80px;
+    }
     z-index: 2;
     width: 83%;
   }
@@ -30,6 +36,11 @@
 
   .serviceInfo {
     padding-left: 70px;
+    @media only screen and (max-width: $break-mobile) {
+      padding-left: 15px;
+      padding-right: 15px;
+      align-items: center;
+    }
     h2 {
       margin-bottom: 40px;
     }
@@ -47,7 +58,7 @@
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;
-        line-height: normal;
+        line-height: 1;
         letter-spacing: 2px;
         color: $primary;
         margin-bottom: 22px;
@@ -81,8 +92,10 @@
         }
       }
       .serviceInfo {
-        padding-left: 0;
-        padding-right: 70px;
+        @media only screen and (min-width: $break-mobile + 1) {
+          padding-left: 0;
+          padding-right: 70px;
+        }
       }
     }
   }
@@ -92,18 +105,21 @@
   class:left={position == 'left'}
   class:right={position == 'right'}
   class="imageGroupWrapper row d-flex align-items-center">
-  <div class="imageContainer col-md-6 p-0">
+  <div class="imageContainer col-md-6 p-0 mb-20 mb-md-0">
     <img class="imgMain" src={imageMain} alt="" />
     <img class="imgSecondary" src={imageSecondary} alt="" />
   </div>
-  <div class="serviceInfo col-md-6">
+  <div class="serviceInfo col-md-6 d-flex flex-column align-items-start">
     <h2>{title}</h2>
     <p>{text}</p>
     <ul class="servicesList">
-      <li>Frontend Development</li>
+      <!-- <li>Frontend Development</li>
       <li>Backend Development</li>
       <li>Mobile Development</li>
-      <li>Blockchain Development</li>
+      <li>Blockchain Development</li> -->
+      {#each listItems as item}
+        <li>{item}</li>
+      {/each}
     </ul>
     <Button text="View service" />
   </div>
