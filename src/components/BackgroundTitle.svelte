@@ -2,7 +2,8 @@
     export let title = 'Page title'
 </script>
 
-<style>
+<style lang="scss">
+    @import '../styles/global.scss';
   p {
     -webkit-text-stroke: 0.6px #e5e5e5;
     font-family: Swansea;
@@ -14,6 +15,9 @@
     letter-spacing: normal;
     color: rgba(18, 18, 18, 0);
     white-space: nowrap;
+    @media only screen and (max-width: $break-mobile) {
+        display: none;
+    }
   }
 </style>
 

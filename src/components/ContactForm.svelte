@@ -1,4 +1,6 @@
 <script>
+import Button from "./Button.svelte";
+
   let formFields = {
     name: "",
     email: "",
@@ -80,6 +82,13 @@
         height:auto;
       }
     }
+    .error{
+        color: red;
+        padding: 5px 15px;
+    }
+    .btnSubmit{
+        margin-top: 50px;
+    }
   }
 </style>
 
@@ -141,7 +150,11 @@
           <div class="error">{formErrors.message}</div>
         </div>
       </div>
-      <div class="row"><button>Submit</button></div>
+      <div class="row">
+          <div class="btnSubmit col d-flex justify-content-center">
+          	<Button text="Submit"/>
+          </div>
+      </div>
     </form>
   </div>
 </div>

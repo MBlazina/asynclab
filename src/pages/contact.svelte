@@ -1,5 +1,6 @@
 <script>
-  import BackgroundTitle from "../components/BackgroundTitle.svelte";
+  import AddressBox from "../components/AddressBox.svelte";
+import BackgroundTitle from "../components/BackgroundTitle.svelte";
 import ContactForm from "../components/ContactForm.svelte";
 
   const pageTitle = "Contact Page";
@@ -13,9 +14,18 @@ import ContactForm from "../components/ContactForm.svelte";
   }
   .introText{
     margin-bottom: 110px;
+    @media only screen and (max-width: $break-mobile) {
+      margin-bottom: 50px;
+    }
   }
   .formWrapper{
     margin-bottom: 120px;
+  }
+  .addressSection{
+    margin-bottom: 287px;
+    @media only screen and (max-width: $break-mobile) {
+      margin-bottom: 50px;
+    }
   }
 </style>
 
@@ -39,5 +49,16 @@ import ContactForm from "../components/ContactForm.svelte";
   </div>
   <div class="row formWrapper">
     <ContactForm />
+  </div>
+  <div class="row addressSection">
+    <div class="col-lg-4 mb-20 mb-lg-0">
+      <AddressBox />
+    </div>
+    <div class="col-lg-4 mb-20 mb-lg-0" >
+      <AddressBox background="gray"/>
+    </div>
+    <div class="col-lg-4 mb-20 mb-lg-0" >
+      <AddressBox background="black"/>
+    </div>
   </div>
 </div>
