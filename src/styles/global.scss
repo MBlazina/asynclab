@@ -1,3 +1,5 @@
+$break-mobile: 768px;
+
 $primary:      #1d1d1d;
 $secondary: #2396b4;
 
@@ -17,8 +19,31 @@ $black:    #000;
     font-family: 'Swansea';
     font-style: normal;
     font-weight: normal;
-    src: url('../../public/assets/fonts/Swansea.woff') format('woff');
+    src: url('/assets/fonts/Swansea.woff') format('woff');
 }
 *{
-    font-family: 'Swansea';
+    font-family: 'Swansea', sans-serif;
 }
+
+footer ul a{
+    position: relative;
+    display: inline-block;
+    &::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: -4px;
+        background-color: $gray-100;
+        opacity:0;
+        transition: opacity 0.2s, bottom 0.2s;
+    }
+    &:hover{
+        &::after{
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+}
+    
