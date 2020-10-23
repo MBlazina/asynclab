@@ -48,7 +48,7 @@
   }
 </style>
 
-<div class="container">
+<div class="container" data-aos="fade-up">
   <div class="row">
     <h1 class="col-md-8 offset-md-1">Building from idea to implementation</h1>
     <div class="col-md-3">

@@ -5,7 +5,7 @@ import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 
 import sveltePreprocess from "svelte-preprocess";
-import image from 'svelte-image'
+
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -54,8 +54,8 @@ export default {
         postcss: {
           plugins: [require("autoprefixer")()],
         },
-        ...image(),
       }),
+      
       // enable run-time checks when not in production
       dev: !production,
       // we'll extract any component CSS out into

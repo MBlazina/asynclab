@@ -1,6 +1,5 @@
 <script>
   import Button from "./Button.svelte";
-  import Image from "svelte-image";
   
   export let position = "right";
   export let title = "title";
