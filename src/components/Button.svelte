@@ -1,5 +1,9 @@
 <script>
     export let text = "text";
+    export let link = '/index';
+    export let color = 'black'
+
+    import { url, isActive } from "@sveltech/routify";
 </script>
 <style lang="scss">
     @import '../styles/global.scss';
@@ -17,10 +21,18 @@ button{
   min-width: 220px;
   border: none;
   position: relative;
-  &:hover{
-      background-color: rgba(16, 16, 16, 0.3);
+ &:hover{
+     background-color: $secondary;
+ }
+  &.btn-white{
+      background-color: white;
+      color: $primary;
+      &:hover{
+      background-color: $primary;
+      color: white;
+  }
   }
 }
 </style>
 
-<button class="d-flex justify-content-center align-items-center">{text}</button>
+<a href={$url(link)}><button class:btn-white="{color == 'white'}" class="d-flex justify-content-center align-items-center">{text}</button></a>

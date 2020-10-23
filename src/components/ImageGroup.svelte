@@ -1,6 +1,7 @@
 <script>
   import Button from "./Button.svelte";
-
+  import Image from "svelte-image";
+  
   export let position = "right";
   export let title = "title";
   export let text = "insert some profound text here";
