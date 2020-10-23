@@ -195,9 +195,7 @@
           <div class="menuArrow" />
         </li>
         <li>
-          <a
-            href={$url('/projects')}
-            class:active={$isActive('/projects')}>Projects</a>
+          <a href={$url('/projects')} class:active={$isActive('/projects')}>Projects</a>
           <div class="menuArrow" />
         </li>
         <li>
@@ -205,15 +203,11 @@
           <div class="menuArrow" />
         </li>
         <li>
-          <a
-            href={$url('/services')}
-            class:active={$isActive('/services')}>Services</a>
+          <a href={$url('/services')} class:active={$isActive('/services')}>Services</a>
           <div class="menuArrow" />
         </li>
         <li>
-          <a
-            href={$url('/contact')}
-            class:active={$isActive('/contact')}>Contact</a>
+          <a href={$url('/constact')} class:active={$isActive('/constact')}>Contact</a>
           <div class="menuArrow" />
         </li>
       </ul>
