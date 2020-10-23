@@ -192,7 +192,7 @@
       <div class="closeIcon" on:click={handleMenu} />
     </div>
     <div class="row">
-      <ul class="mainNav offset-md-2 col-md-4" on:click={handleMenu}>
+      <ul class="mainNav offset-lg-2 col-lg-4" on:click={handleMenu}>
         <li>
           <a href={$url('/index')}>Home</a>
           <div class="menuArrow" />
@@ -214,7 +214,7 @@
           <div class="menuArrow" />
         </li>
       </ul>
-      <ul class="utilityNav offset-md-1 col-md-4" on:click={handleMenu}>
+      <ul class="utilityNav offset-lg-1 col-lg-4" on:click={handleMenu}>
         <li>
           <a
             href={$url('/careers')}
