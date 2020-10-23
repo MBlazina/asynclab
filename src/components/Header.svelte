@@ -5,10 +5,13 @@
   function handleMenu() {
     menuOpen = !menuOpen;
   }
+
 </script>
 
 <style lang="scss">
   @import "../styles/global.scss";
+
+
   #mainMenu {
     position: absolute;
     right: -100%;
@@ -152,10 +155,10 @@
       &::after {
         background-color: white;
       }
-      &::before{
+      &::before {
         transform: rotate(135deg);
       }
-      &::after{
+      &::after {
         transform: rotate(45deg);
       }
     }
@@ -191,23 +194,23 @@
     <div class="row">
       <ul class="mainNav offset-md-2 col-md-4" on:click={handleMenu}>
         <li>
-          <a href={$url('/index')} class:active={$isActive('/index')}>Home</a>
+          <a href={$url('/index')}>Home</a>
           <div class="menuArrow" />
         </li>
         <li>
-          <a href={$url('/projects')} class:active={$isActive('/projects')}>Projects</a>
+          <a href={$url('/projects')}>Projects</a>
           <div class="menuArrow" />
         </li>
         <li>
-          <a href={$url('/about')} class:active={$isActive('/about')}>About</a>
+          <a href={$url('/about')}>About</a>
           <div class="menuArrow" />
         </li>
         <li>
-          <a href={$url('/services')} class:active={$isActive('/services')}>Services</a>
+          <a href={$url('/services')}>Services</a>
           <div class="menuArrow" />
         </li>
         <li>
-          <a href={$url('/constact')} class:active={$isActive('/constact')}>Contact</a>
+          <a href={$url('/contact')}>Contact</a>
           <div class="menuArrow" />
         </li>
       </ul>
@@ -235,7 +238,7 @@
         href={$url('/index')}
         class="pl-15 pl-md-0"
         class:active={$isActive('/index')}>
-        <img alt="logo" src="assets/logo.svg" width="105" />
+        <img alt="logo" src="/assets/logo.svg" width="105" />
       </a>
       <div
         id="menuIcon"

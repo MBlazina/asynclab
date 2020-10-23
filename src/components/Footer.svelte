@@ -60,7 +60,7 @@ footer :global(.LinkComponent:hover){
   <div class="container">
     <div class="row">
       <a href={$url('/index')} class="col-12 col-md-2 text-center mb-30 align-self-start">
-        <img alt="logo" src="assets/logo-white.svg" width="105" />
+        <img alt="logo" src="/assets/logo-white.svg" width="105" />
       </a>
       <ul class="col-6 col-sm-4 col-md-2 offset-md-1">
         <li><Link text="About" link="/about"/></li>
